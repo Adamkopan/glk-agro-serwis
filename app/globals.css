@@ -217,7 +217,7 @@ h2 {
 
 .serviceGrid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 18px;
 }
 
@@ -299,6 +299,26 @@ h2 {
   width: 100%;
   background: var(--white);
   color: var(--green-deep);
+}
+
+.mapPanel {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.contactActions .mapAddress {
+  min-height: 48px;
+  border-radius: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.mapPanel iframe {
+  display: block;
+  width: 100%;
+  height: clamp(220px, 28vw, 340px);
+  border: 0;
 }
 
 .contact h2 {

@@ -1,32 +1,41 @@
 import Image from "next/image";
 
-const phoneNumber = "+48 000 000 000";
-const emailAddress = "kontakt@glkagroserwis.pl";
+const phoneNumber = "+48 884826000";
+const emailAddress = "glkagro.serwis@gmail.com";
+const workshopAddress = "Brzeziny 139, 22-310 Kraśniczyn";
+const workshopMapUrl =
+  "https://www.google.com/maps/search/?api=1&query=Brzeziny%20139%2C%2022-310%20Kra%C5%9Bniczyn";
+const workshopMapEmbedUrl =
+  "https://maps.google.com/maps?q=Brzeziny%20139%2C%2022-310%20Kra%C5%9Bniczyn&t=&z=14&ie=UTF8&iwloc=&output=embed";
 
 const services = [
   {
     title: "Diagnostyka u klienta",
-    text: "Przyjezdzamy na gospodarstwo i wykonujemy diagnostyke profesjonalnym oprogramowaniem oraz narzedziami serwisowymi.",
+    text: "Przyjeżdżamy na gospodarstwo i wykonujemy diagnostykę profesjonalnym oprogramowaniem oraz narzędziami serwisowymi.",
   },
   {
     title: "Naprawy w terenie",
-    text: "Usuwamy awarie mechaniczne, elektryczne i hydrauliczne bez koniecznosci transportu maszyny.",
+    text: "Usuwamy awarie mechaniczne, elektryczne i hydrauliczne bez konieczności transportu maszyny.",
   },
   {
     title: "Transport do warsztatu",
-    text: "Gdy naprawa wymaga zaplecza warsztatowego, organizujemy dalsze dzialania i serwis poza miejscem awarii.",
+    text: "Gdy naprawa wymaga zaplecza warsztatowego, organizujemy dalsze działania i serwis poza miejscem awarii.",
   },
   {
-    title: "Czesci do maszyn",
-    text: "Na zapytanie oferujemy rowniez sprzedaz czesci do ciagnikow, kombajnow i innych maszyn rolniczych.",
+    title: "Części do maszyn",
+    text: "Na zapytanie oferujemy również sprzedaż części do ciągników, kombajnów i innych maszyn rolniczych.",
+  },
+  {
+    title: "Renowacje i odświeżanie",
+    text: "Zajmujemy się także renowacją, odświeżaniem i przygotowaniem maszyn do dalszej pracy lub sezonu.",
   },
 ];
 
 const brandNotes = [
-  "Claas i Renault: diagnostyka oraz naprawy ciagnikow i kombajnow, od ukladow elektrycznych po mechanike robocza.",
-  "Massey Ferguson: obsluga popularnych modeli wykorzystywanych w gospodarstwach, z naciskiem na szybka diagnoze usterki.",
-  "Zetor i Ursus: serwis prostszych, wytrzymalych konstrukcji oraz pomoc przy czesciach eksploatacyjnych i naprawczych.",
-  "Inne marki: jezeli maszyna pracuje w gospodarstwie, warto zadzwonic i opisac problem - sprawdzimy, jak mozemy pomoc.",
+  "Claas i Renault: diagnostyka oraz naprawy ciągników i kombajnów, od układów elektrycznych po mechanikę roboczą.",
+  "Massey Ferguson: obsługa popularnych modeli wykorzystywanych w gospodarstwach, z naciskiem na szybką diagnozę usterki.",
+  "Zetor i Ursus: serwis prostszych, wytrzymałych konstrukcji oraz pomoc przy częściach eksploatacyjnych i naprawczych.",
+  "Inne marki: jeżeli maszyna pracuje w gospodarstwie, warto zadzwonić i opisać problem - sprawdzimy, jak możemy pomóc.",
 ];
 
 export default function Home() {
@@ -35,7 +44,7 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <Image
           src="/images/mobile-tractor-service.png"
-          alt="Mobilny mechanik diagnozujacy traktor na gospodarstwie"
+          alt="Mobilny mechanik diagnozujący traktor na gospodarstwie"
           fill
           priority
           sizes="100vw"
@@ -46,22 +55,22 @@ export default function Home() {
           <a className="brand" href="#top" aria-label="GLK Agro Serwis">
             GLK Agro Serwis
           </a>
-          <nav aria-label="Glowne">
-            <a href="#uslugi">Uslugi</a>
+          <nav aria-label="Główne">
+            <a href="#uslugi">Usługi</a>
             <a href="#marki">Marki</a>
             <a href="#kontakt">Kontakt</a>
           </nav>
         </header>
         <div className="heroContent" id="top">
           <p className="eyebrow">Mobilny serwis maszyn rolniczych</p>
-          <h1 id="hero-title">Naprawa traktorow i kombajnow bez dojazdu do warsztatu</h1>
+          <h1 id="hero-title">Naprawa traktorów i kombajnów bez dojazdu do warsztatu</h1>
           <p className="lead">
-            Dojezdzamy do klienta, wykonujemy diagnostyke na miejscu i naprawiamy maszyny w
-            gospodarstwie. Jesli trzeba, zabieramy sprzet do warsztatu.
+            Dojeżdżamy do klienta, wykonujemy diagnostykę na miejscu i naprawiamy maszyny w
+            gospodarstwie. Jeśli trzeba, zabieramy sprzęt do warsztatu.
           </p>
           <div className="heroActions">
             <a className="button primary" href={`tel:${phoneNumber.replaceAll(" ", "")}`}>
-              Zadzwon teraz
+              Zadzwoń teraz
             </a>
             <a className="button secondary" href={`mailto:${emailAddress}`}>
               Napisz email
@@ -70,24 +79,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section intro" aria-label="Najwazniejsze informacje">
+      <section className="section intro" aria-label="Najważniejsze informacje">
         <p className="sectionLabel">Szybka pomoc w sezonie i poza sezonem</p>
-        <h2>Serwis wtedy, gdy maszyna musi wrocic do pracy.</h2>
+        <h2>Serwis wtedy, gdy maszyna musi wrócić do pracy.</h2>
         <div className="introText">
           <p>
-            Awarie maszyn rolniczych najczesciej zdarzaja sie wtedy, gdy sprzet jest
-            najbardziej potrzebny. Dlatego przyjezdzamy bezposrednio do klienta, sprawdzamy
-            objawy na miejscu i od razu ustalamy, czy naprawa jest mozliwa w gospodarstwie.
+            Awarie maszyn rolniczych najczęściej zdarzają się wtedy, gdy sprzęt jest
+            najbardziej potrzebny. Dlatego przyjeżdżamy bezpośrednio do klienta, sprawdzamy
+            objawy na miejscu i od razu ustalamy, czy naprawa jest możliwa w gospodarstwie.
           </p>
           <p>
-            Korzystamy z profesjonalnych narzedzi diagnostycznych i oprogramowania
-            serwisowego, zeby precyzyjnie okreslic przyczyne problemu. Pomagamy przy
+            Korzystamy z profesjonalnych narzędzi diagnostycznych i oprogramowania
+            serwisowego, żeby precyzyjnie określić przyczynę problemu. Pomagamy przy
             usterkach mechanicznych, elektrycznych i hydraulicznych, a gdy sytuacja tego
-            wymaga, kierujemy maszyne do warsztatu.
+            wymaga, kierujemy maszynę do warsztatu.
           </p>
           <p>
-            Na zapytanie mozemy rowniez pomoc w doborze i sprzedazy czesci do ciagnikow,
-            kombajnow oraz innych maszyn rolniczych.
+            Na zapytanie możemy również pomóc w doborze i sprzedaży części do ciągników,
+            kombajnów oraz innych maszyn rolniczych. Zajmujemy się też renowacją i
+            odświeżaniem maszyn, które wymagają przygotowania do dalszej pracy.
           </p>
         </div>
       </section>
@@ -109,8 +119,8 @@ export default function Home() {
       </section>
 
       <section className="section brands" id="marki" aria-labelledby="brands-title">
-        <p className="sectionLabel">Obslugiwane marki</p>
-        <h2 id="brands-title">Doswiadczenie z najczesciej spotykanymi maszynami</h2>
+        <p className="sectionLabel">Obsługiwane marki</p>
+        <h2 id="brands-title">Doświadczenie z najczęściej spotykanymi maszynami</h2>
         <div className="brandCopy">
           {brandNotes.map((note) => (
             <p key={note}>{note}</p>
@@ -123,13 +133,25 @@ export default function Home() {
           <p className="sectionLabel">Kontakt</p>
           <h2 id="contact-title">Potrzebujesz naprawy w gospodarstwie?</h2>
           <p>
-            Zadzwon lub napisz. Podaj model maszyny, objawy usterki i lokalizacje, a ustalimy
-            najblizszy mozliwy termin przyjazdu. Mozesz tez zapytac o dostepnosc czesci.
+            Zadzwoń lub napisz. Podaj model maszyny, objawy usterki i lokalizację, a ustalimy
+            najbliższy możliwy termin przyjazdu. Możesz też zapytać o dostępność części,
+            renowację albo odświeżenie maszyny.
           </p>
         </div>
         <div className="contactActions">
           <a href={`tel:${phoneNumber.replaceAll(" ", "")}`}>{phoneNumber}</a>
           <a href={`mailto:${emailAddress}`}>{emailAddress}</a>
+          <div className="mapPanel">
+            <a className="mapAddress" href={workshopMapUrl} target="_blank" rel="noreferrer">
+              {workshopAddress}
+            </a>
+            <iframe
+              src={workshopMapEmbedUrl}
+              title="Mapa dojazdu do warsztatu GLK Agro Serwis"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </footer>
     </main>
