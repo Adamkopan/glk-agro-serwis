@@ -321,6 +321,83 @@ h2 {
   border: 0;
 }
 
+.footerMeta {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 14px 24px;
+  align-self: end;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding-top: 22px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+}
+
+.footerMeta a {
+  color: var(--white);
+  font-weight: 800;
+}
+
+.policyPage {
+  background: var(--bg);
+  color: var(--text);
+  padding: clamp(42px, 8vw, 96px) 18px;
+}
+
+.policyContent {
+  width: min(920px, 100%);
+  margin: 0 auto;
+}
+
+.policyContent h1 {
+  max-width: 760px;
+  color: var(--text);
+}
+
+.policyDate {
+  margin: 18px 0 44px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.policyContent section {
+  border-top: 1px solid var(--line);
+  padding: 30px 0;
+}
+
+.policyContent h2 {
+  margin-bottom: 16px;
+  font-size: clamp(1.5rem, 2.6vw, 2.15rem);
+}
+
+.policyContent p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.policyContent p + p {
+  margin-top: 14px;
+}
+
+.policyContent a {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.policyBack {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 26px;
+  border-radius: 6px;
+  background: var(--green-deep);
+  padding: 13px 20px;
+  color: var(--white) !important;
+}
+
 .contact h2 {
   max-width: 820px;
   font-size: clamp(2.6rem, 6.5vw, 5.8rem);

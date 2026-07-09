@@ -153,6 +153,10 @@ export default function Home() {
             />
           </div>
         </div>
+        <div className="footerMeta">
+          <a href="/privacy-policy">Polityka prywatności</a>
+          <span>© 2026 GLK Agro Serwis. Wszelkie prawa zastrzeżone.</span>
+        </div>
       </footer>
     </main>
   );
